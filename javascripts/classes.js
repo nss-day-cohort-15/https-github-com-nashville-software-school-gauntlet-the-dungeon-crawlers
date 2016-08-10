@@ -25,11 +25,11 @@ Gauntlet.GuildHall.PlayerClass = function() {
       - Sandra Lee
       - Rachael Ray
  */
-Gauntlet.GuildHall.SouthernCooking = function() {
+Gauntlet.GuildHall.SouthernChefs = function() {
   this.healthBonus = 20;
   this.strengthBonus = 10;
 };
-Gauntlet.GuildHall.SouthernCooking.prototype = new Gauntlet.GuildHall.PlayerClass();
+Gauntlet.GuildHall.SouthernChefs.prototype = new Gauntlet.GuildHall.PlayerClass();
 
 
 Gauntlet.GuildHall.PaulaDean = function() {
@@ -37,7 +37,7 @@ Gauntlet.GuildHall.PaulaDean = function() {
   this.healthBonus = this.healthBonus + 25;
   this.strengthBonus = this.strengthBonus + 30;
 };
-Gauntlet.GuildHall.PaulaDean.prototype = new Gauntlet.GuildHall.SouthernCooking();
+Gauntlet.GuildHall.PaulaDean.prototype = new Gauntlet.GuildHall.SouthernChefs();
 
 
 Gauntlet.GuildHall.SandraLee = function() {
@@ -45,7 +45,7 @@ Gauntlet.GuildHall.SandraLee = function() {
   this.healthBonus = this.healthBonus + 20;
   this.strengthBonus = this.strengthBonus + 10;
 };
-Gauntlet.GuildHall.SandraLee.prototype = new Gauntlet.GuildHall.SouthernCooking();
+Gauntlet.GuildHall.SandraLee.prototype = new Gauntlet.GuildHall.SouthernChefs();
 
 
 Gauntlet.GuildHall.RachaelRay = function() {
@@ -53,7 +53,7 @@ Gauntlet.GuildHall.RachaelRay = function() {
   this.healthBonus = this.healthBonus + 20;
   this.strengthBonus = this.strengthBonus + 10;
 };
-Gauntlet.GuildHall.RachaelRay.prototype = new Gauntlet.GuildHall.SouthernCooking();
+Gauntlet.GuildHall.RachaelRay.prototype = new Gauntlet.GuildHall.SouthernChefs();
 
 /*
     REALITY FOOD CLASSES
@@ -61,14 +61,14 @@ Gauntlet.GuildHall.RachaelRay.prototype = new Gauntlet.GuildHall.SouthernCooking
       - Gordon Ramsey
 
  */
-Gauntlet.GuildHall.RealityFood = function() {
+Gauntlet.GuildHall.RealityTvChefs = function() {
   this.name = "RealityFood";
   this.magical = true;
   this.healthBonus = this.healthBonus - 10;
   this.strengthBonus = this.strengthBonus - 20;
   this.intelligenceBonus = this.intelligenceBonus + 20;
 };
-Gauntlet.GuildHall.RealityFood.prototype = new Gauntlet.GuildHall.PlayerClass();
+Gauntlet.GuildHall.RealityTvChefs.prototype = new Gauntlet.GuildHall.PlayerClass();
 
 
 Gauntlet.GuildHall.GuyFieri = function() {
@@ -77,7 +77,7 @@ Gauntlet.GuildHall.GuyFieri = function() {
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 20;
 };
-Gauntlet.GuildHall.GuyFieri.prototype = new Gauntlet.GuildHall.RealityFood();
+Gauntlet.GuildHall.GuyFieri.prototype = new Gauntlet.GuildHall.RealityTvChefs();
 
 
 Gauntlet.GuildHall.GordonRamsey = function() {
@@ -86,7 +86,7 @@ Gauntlet.GuildHall.GordonRamsey = function() {
   this.strengthBonus = this.strengthBonus - 25;
   this.intelligenceBonus = this.intelligenceBonus + 40;
 };
-Gauntlet.GuildHall.GordonRamsey.prototype = new Gauntlet.GuildHall.RealityFood();
+Gauntlet.GuildHall.GordonRamsey.prototype = new Gauntlet.GuildHall.RealityTvChefs();
 
 
 
@@ -96,14 +96,14 @@ Gauntlet.GuildHall.GordonRamsey.prototype = new Gauntlet.GuildHall.RealityFood()
       - Ninja
       - Assassin
  */
-Gauntlet.GuildHall.FastFood = function() {
+Gauntlet.GuildHall.FastFoodChefs = function() {
   this.name = "FastFood";
   this.magical = true;
   this.healthBonus = this.healthBonus - 10;
   this.strengthBonus = this.strengthBonus - 20;
   this.intelligenceBonus = this.intelligenceBonus + 20;
 };
-Gauntlet.GuildHall.FastFood.prototype = new Gauntlet.GuildHall.PlayerClass();
+Gauntlet.GuildHall.FastFoodChefs.prototype = new Gauntlet.GuildHall.PlayerClass();
 
 
 Gauntlet.GuildHall.RonaldMcdonald = function() {
@@ -112,7 +112,7 @@ Gauntlet.GuildHall.RonaldMcdonald = function() {
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 20;
 };
-Gauntlet.GuildHall.RonaldMcdonald.prototype = new Gauntlet.GuildHall.FastFood();
+Gauntlet.GuildHall.RonaldMcdonald.prototype = new Gauntlet.GuildHall.FastFoodChefs();
 
 
 Gauntlet.GuildHall.TheKing = function() {
@@ -121,7 +121,7 @@ Gauntlet.GuildHall.TheKing = function() {
   this.strengthBonus = this.strengthBonus - 25;
   this.intelligenceBonus = this.intelligenceBonus + 40;
 };
-Gauntlet.GuildHall.TheKing.prototype = new Gauntlet.GuildHall.FastFood();
+Gauntlet.GuildHall.TheKing.prototype = new Gauntlet.GuildHall.FastFoodChefs();
 
 Gauntlet.GuildHall.Wendy = function() {
   this.name = "Wendy";
@@ -129,4 +129,4 @@ Gauntlet.GuildHall.Wendy = function() {
   this.strengthBonus = this.strengthBonus - 25;
   this.intelligenceBonus = this.intelligenceBonus + 40;
 };
-Gauntlet.GuildHall.Wendy.prototype = new Gauntlet.GuildHall.FastFood();
+Gauntlet.GuildHall.Wendy.prototype = new Gauntlet.GuildHall.FastFoodChefs();
