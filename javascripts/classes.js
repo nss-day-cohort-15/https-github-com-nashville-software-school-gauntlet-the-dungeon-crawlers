@@ -20,107 +20,113 @@ Gauntlet.GuildHall.PlayerClass = function() {
 };
 
 /*
-    FIGHTER CLASSES
-      - Warrior
-      - Valkyrie
-      - Berserker
-      - Monk
+    SOUTHERN COOKING CLASSES
+      - Paula Dean
+      - Sandra Lee
+      - Rachael Ray
  */
-Gauntlet.GuildHall.Fighter = function() {
+Gauntlet.GuildHall.SouthernCooking = function() {
   this.healthBonus = 20;
   this.strengthBonus = 10;
 };
-Gauntlet.GuildHall.Fighter.prototype = new Gauntlet.GuildHall.PlayerClass();
+Gauntlet.GuildHall.SouthernCooking.prototype = new Gauntlet.GuildHall.PlayerClass();
 
 
-Gauntlet.GuildHall.Warrior = function() {
-  this.name = "Warrior";
+Gauntlet.GuildHall.PaulaDean = function() {
+  this.name = "PaulaDean";
   this.healthBonus = this.healthBonus + 25;
   this.strengthBonus = this.strengthBonus + 30;
 };
-Gauntlet.GuildHall.Warrior.prototype = new Gauntlet.GuildHall.Fighter();
+Gauntlet.GuildHall.PaulaDean.prototype = new Gauntlet.GuildHall.Fighter();
 
 
-Gauntlet.GuildHall.Valkyrie = function() {
-  this.name = "Valkyrie";
+Gauntlet.GuildHall.SandraLee = function() {
+  this.name = "SandraLee";
   this.healthBonus = this.healthBonus + 20;
   this.strengthBonus = this.strengthBonus + 10;
 };
-Gauntlet.GuildHall.Valkyrie.prototype = new Gauntlet.GuildHall.Fighter();
+Gauntlet.GuildHall.SandraLee.prototype = new Gauntlet.GuildHall.Fighter();
 
 
-Gauntlet.GuildHall.Berserker = function() {
-  this.name = "Berserker";
-  this.healthBonus = this.healthBonus + 35;
-  this.strengthBonus = this.strengthBonus + 20;
+Gauntlet.GuildHall.RachaelRay = function() {
+  this.name = "RachaelRay";
+  this.healthBonus = this.healthBonus + 20;
+  this.strengthBonus = this.strengthBonus + 10;
 };
-Gauntlet.GuildHall.Berserker.prototype = new Gauntlet.GuildHall.Fighter();
-
-
-Gauntlet.GuildHall.Monk = function() {
-  this.name = "Monk";
-  this.healthBonus = this.healthBonus + 10;
-  this.strengthBonus = this.strengthBonus + 40;
-};
-Gauntlet.GuildHall.Monk.prototype = new Gauntlet.GuildHall.Fighter();
-
+Gauntlet.GuildHall.RachaelRay.prototype = new Gauntlet.GuildHall.Fighter();
 
 /*
-    MAGICAL CLASSES
-      - Shaman
-      - Wizard
-      - Conujurer
-      - Sorcerer
+    REALITY FOOD CLASSES
+      - Guy Fieri
+      - Gordon Ramsey
+
  */
-Gauntlet.GuildHall.Mage = function() {
-  this.name = "Mage";
+Gauntlet.GuildHall.RealityFood = function() {
+  this.name = "RealityFood";
   this.magical = true;
   this.healthBonus = this.healthBonus - 10;
   this.strengthBonus = this.strengthBonus - 20;
   this.intelligenceBonus = this.intelligenceBonus + 20;
 };
-Gauntlet.GuildHall.Mage.prototype = new Gauntlet.GuildHall.PlayerClass();
+Gauntlet.GuildHall.RealityFood.prototype = new Gauntlet.GuildHall.PlayerClass();
 
 
-Gauntlet.GuildHall.Shaman = function() {
-  this.name = "Shaman";
+Gauntlet.GuildHall.GuyFieri = function() {
+  this.name = "GuyFieri";
   this.healthBonus = this.healthBonus + 5;
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 20;
 };
-Gauntlet.GuildHall.Shaman.prototype = new Gauntlet.GuildHall.Mage();
+Gauntlet.GuildHall.GuyFieri.prototype = new Gauntlet.GuildHall.Mage();
 
 
-Gauntlet.GuildHall.Wizard = function() {
-  this.name = "Wizard";
+Gauntlet.GuildHall.GordonRamsey = function() {
+  this.name = "GordonRamsey";
   this.healthBonus = this.healthBonus - 15;
   this.strengthBonus = this.strengthBonus - 25;
   this.intelligenceBonus = this.intelligenceBonus + 40;
 };
-Gauntlet.GuildHall.Wizard.prototype = new Gauntlet.GuildHall.Mage();
+Gauntlet.GuildHall.GordonRamsey.prototype = new Gauntlet.GuildHall.Mage();
 
-
-Gauntlet.GuildHall.Conjurer = function() {
-  this.name = "Conjurer";
-  this.strengthBonus = this.strengthBonus - 10;
-  this.intelligenceBonus = this.intelligenceBonus + 10;
-};
-Gauntlet.GuildHall.Conjurer.prototype = new Gauntlet.GuildHall.Mage();
-
-
-Gauntlet.GuildHall.Sorcerer = function() {
-  this.name = "Sorcerer";
-  this.healthBonus = this.healthBonus - 5;
-  this.strengthBonus = this.strengthBonus - 20;
-  this.intelligenceBonus = this.intelligenceBonus + 30;
-};
-Gauntlet.GuildHall.Sorcerer.prototype = new Gauntlet.GuildHall.Mage();
 
 
 /*
-    STEALTH CLASSES
+    FASTFOOD CLASSES
       - Thief
       - Ninja
       - Assassin
  */
+Gauntlet.GuildHall.FastFood = function() {
+  this.name = "FastFood";
+  this.magical = true;
+  this.healthBonus = this.healthBonus - 10;
+  this.strengthBonus = this.strengthBonus - 20;
+  this.intelligenceBonus = this.intelligenceBonus + 20;
+};
+Gauntlet.GuildHall.FastFood.prototype = new Gauntlet.GuildHall.PlayerClass();
 
+
+Gauntlet.GuildHall.RonaldMcdonald = function() {
+  this.name = "RonaldMcdonald";
+  this.healthBonus = this.healthBonus + 5;
+  this.strengthBonus = this.strengthBonus - 10;
+  this.intelligenceBonus = this.intelligenceBonus + 20;
+};
+Gauntlet.GuildHall.RonaldMcdonald.prototype = new Gauntlet.GuildHall.Mage();
+
+
+Gauntlet.GuildHall.TheKing = function() {
+  this.name = "TheKing";
+  this.healthBonus = this.healthBonus - 15;
+  this.strengthBonus = this.strengthBonus - 25;
+  this.intelligenceBonus = this.intelligenceBonus + 40;
+};
+Gauntlet.GuildHall.TheKing.prototype = new Gauntlet.GuildHall.Mage();
+
+Gauntlet.GuildHall.Wendy = function() {
+  this.name = "Wendy";
+  this.healthBonus = this.healthBonus - 15;
+  this.strengthBonus = this.strengthBonus - 25;
+  this.intelligenceBonus = this.intelligenceBonus + 40;
+};
+Gauntlet.GuildHall.Wendy.prototype = new Gauntlet.GuildHall.Mage();

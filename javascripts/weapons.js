@@ -8,24 +8,30 @@ var Weapon = function() {
   }
 };
 
-var Dagger = function() {
-  this.name = "dagger";
-  this.damage = 4;
+var Broccoli = function() {
+  this.name = "broccoli";
+  this.damage = 1;
   this.hands = 1;
 };
-Dagger.prototype = new Weapon();
+Broccoli.prototype = new Weapon();
 
-var BroadSword = function() {
-  this.name = "broad sword";
-  this.damage = 14;
+var Taco = function() {
+  this.name = "taco";
+  this.damage = 2;
+  this.hands = 1;
+};
+Taco.prototype = new Weapon();
+
+var ChocolateCake = function() {
+  this.name = "chocolate cake";
+  this.damage = 16;
   this.hands = 2;
 };
-BroadSword.prototype = new Weapon();
+ChocolateCake.prototype = new Weapon();
 
-var WarAxe = function() {
-  this.name = "war axe";
+var Butter = function() {
+  this.name = "butter";
   this.damage = 18;
   this.hands = 2;
 };
-WarAxe.prototype = new Weapon();
-
+Butter.prototype = new Weapon();
