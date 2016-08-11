@@ -64,6 +64,7 @@ Gauntlet.Combatants.Player.prototype.generateWeapons = function() {
   var random = Math.round(Math.random() * (this.allowedWeapons.length - 1));
 
   // Get the string at the index
+
   var randomWeapon = this.allowedWeapons[random];
 
   // Composes the corresponding player class into the player object
@@ -75,6 +76,7 @@ Gauntlet.Combatants.Player.prototype.generateWeapons = function() {
 };
 
 Gauntlet.Combatants.Player.prototype.createClass = function(selectedClass) {
+
  // Get a random index from the allowed classes array
  // var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
 // console.log(selectedClass)
@@ -89,9 +91,10 @@ Gauntlet.Combatants.Player.prototype.createClass = function(selectedClass) {
  return this.class;
 };
 
+
 Gauntlet.Combatants.Player.prototype.createWeapons = function(selectedWeapons) {
- this.weapons = new Gauntlet.Weapons[selectedWeapons]();
- return this.weapons;
+ this.weapons = new Gauntlet.Weapons[selectedWeapons]();
+ return this.weapons;
 };
 
 /*

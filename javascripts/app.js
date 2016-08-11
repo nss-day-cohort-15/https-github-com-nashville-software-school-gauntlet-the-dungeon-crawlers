@@ -1,3 +1,4 @@
+
 /*
   Test code to generate a human player and an orc player
  */
@@ -10,7 +11,6 @@
 var opponent = new Gauntlet.Combatants.Orc();
 opponent.generateClass();
 opponent.weapons = opponent.generateWeapons();
-
 
 // Added Event Listener to Class Button and Added Player Class
 
@@ -37,7 +37,6 @@ for (var i = 0; i < buttons.length; i++){
 }
 
 
-
 /*
   Test code to generate a spell
  */
@@ -51,7 +50,8 @@ $(document).ready(function() {
   var playerInfo = $("#playerInfo")
   var monsterInfo = $("#monsterInfo")
   playerInfo.html(`<p>${player.class.name}</p>`)
-  fight()
+  // fight()
+
 
   console.log(player)
   console.log(monster)
@@ -63,6 +63,7 @@ $(document).ready(function() {
     display(finalPlayer, opponent)
   })
 
+
   // $("#attackButton").click(function (e){
   //     var monsterHealth = opponent.health.value;
   //     var playerHealth = finalPlayer.health.value;
@@ -70,6 +71,7 @@ $(document).ready(function() {
   //     var playerDamage = finalPlayer.weapons.damage;
   //     console.log(monsterHealth playerDamage)
   //   )}
+
 
   /*
     Show the initial view that accepts player name
