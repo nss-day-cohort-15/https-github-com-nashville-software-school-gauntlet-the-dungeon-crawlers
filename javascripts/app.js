@@ -1,15 +1,17 @@
 /*
   Test code to generate a human player and an orc player
  */
-var warrior = new Gauntlet.Combatants.Human();
-warrior.setWeapon(new Broccoli());
-warrior.generateClass();  // This will be used for "Surprise me" option
-console.log(warrior.toString());
+// var warrior = new Gauntlet.Combatants.Human();
+// warrior.setWeapon(new Broccoli());
+// warrior.generateClass();  // This will be used for "Surprise me" option
+// console.log(warrior.toString());
 
-var orc = new Gauntlet.Combatants.Orc();
-orc.generateClass();
-orc.setWeapon(new Taco());
-console.log(orc.toString());
+// var orc = new Gauntlet.Combatants.Orc();
+// orc.generateClass();
+// orc.setWeapon(new Taco());
+// console.log(orc.toString());
+
+// Added Event Listener to Class Button and Added Player Class
 
 var buttons = $('.class__link');
 console.log(buttons)
@@ -18,7 +20,20 @@ for (var i = 0; i < buttons.length; i++){
  currButton.addEventListener('click', function(e){
    var player = new Gauntlet.Combatants.Human();
    player.createClass(e.currentTarget.id)
-   console.log(player)
+   console.log(e.currentTarget.id)
+ })
+}
+
+// Added Event Listener to Weapon Buttons and Added Weapon
+
+var buttons = $('.weapons__link');
+console.log(buttons)
+for (var i = 0; i < buttons.length; i++){
+ var currButton = buttons[i];
+ currButton.addEventListener('click', function(e){
+   var player = new Gauntlet.Combatants.Human();
+   player.createWeapons(e.currentTarget.id)
+   console.log(e.currentTarget.id)
  })
 }
 
