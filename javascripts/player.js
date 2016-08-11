@@ -74,6 +74,19 @@ console.log(selectedClass)
   return this.class;
 };
 
+Gauntlet.Combatants.Player.prototype.createWeapon = function(selectedClass) {
+ // Get a random index from the allowed classes array
+ // var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
+console.log(selectedClass)
+ // Get the string at the index
+ // var randomClass = this.allowedClasses[random];
+
+ // Composes the corresponding player class into the player object
+ this.weapon = new Gauntlet.Inventory[selectedClass]();
+
+ return this.weapon;
+};
+
 /*
   Define the base properties for a human in a
   constructor function.
