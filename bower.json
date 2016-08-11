@@ -1,7 +1,21 @@
 {
-  "name": "gauntlet",
+  "name": "frameworks_testing",
+  "authors": [
+    "Meg Ducharme <ducharme.meg@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "jquery": "^3.1.0"
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.7"
   }
 }
