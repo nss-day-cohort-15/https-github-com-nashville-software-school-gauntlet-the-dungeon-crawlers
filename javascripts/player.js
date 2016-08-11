@@ -11,7 +11,7 @@ Gauntlet.Combatants = {};
 Gauntlet.Combatants.Player = function(name) {
   this.species = null;
   this.class = null;
-  this.weapon = null;
+  this.weapons = null;
 
   this.playerName = name || "unknown adventurer";
   this.health = Math.floor(Math.random() * 40 + 50);
@@ -40,9 +40,9 @@ Gauntlet.Combatants.Player = function(name) {
   };
 };
 
-Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
-  this.weapon = newWeapon;
-}
+// Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
+//   this.weapon = newWeapon;
+// }
 
 Gauntlet.Combatants.Player.prototype.generateClass = function() {
   // Get a random index from the allowed classes array
@@ -72,6 +72,12 @@ console.log(selectedClass)
  // Add the health bonus
  this.health += this.class.healthBonus;
  return this.class;
+};
+
+Gauntlet.Combatants.Player.prototype.createWeapons = function(selectedWeapons) {
+console.log(selectedWeapons)
+ this.weapons = new Gauntlet.Weapons[selectedWeapons]();
+ return this.weapons;
 };
 
 /*
