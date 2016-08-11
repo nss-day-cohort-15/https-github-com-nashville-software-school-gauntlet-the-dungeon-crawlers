@@ -14,8 +14,8 @@
 // Added Event Listener to Class Button and Added Player Class
 
 var buttons = $('.class__link');
-console.log(buttons)
 for (var i = 0; i < buttons.length; i++){
+   console.log("class buttons are working")
  var currButton = buttons[i];
  currButton.addEventListener('click', function(e){
    var player = new Gauntlet.Combatants.Human();
@@ -27,13 +27,12 @@ for (var i = 0; i < buttons.length; i++){
 // Added Event Listener to Weapon Buttons and Added Weapon
 
 var buttons = $('.weapons__link');
-console.log(buttons)
 for (var i = 0; i < buttons.length; i++){
+  console.log("weapon buttons are working")
  var currButton = buttons[i];
  currButton.addEventListener('click', function(e){
    var player = new Gauntlet.Combatants.Human();
    player.createWeapons(e.currentTarget.id)
-   console.log(e.currentTarget.id)
  })
 }
 
