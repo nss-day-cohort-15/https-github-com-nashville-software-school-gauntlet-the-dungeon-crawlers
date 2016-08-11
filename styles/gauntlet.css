@@ -38,6 +38,10 @@ body {
   text-align: center;
 }
 
+.row {
+  padding-left: 80px;
+}
+
 
 /*
   Button styles
@@ -57,17 +61,7 @@ body {
   min-width: 260px;
 }
 
-.btn--orange {
-  border-color: #FF4136;
-  color: white;
-  background-color: #FF4136;
-}
 
-.btn--blue {
-  border-color: #0074D9;
-  color: white;
-  background-color: #0074D9;
-}
 
 .btn--yellow {
   border-color: #E4BD00;
@@ -76,9 +70,10 @@ body {
 }
 
 .btn--big {
-  font-size: 28px;
+  font-size: 24px;
   padding: 10px;
   font-weight: 400;
+  width: 15em;
 }
 
 .btn--small {
@@ -102,4 +97,19 @@ body {
 .btn__text {
   padding: 0 50px 0 20px;
   border-radius: 0 5px 5px 0;
+}
+
+
+.btn--orange {
+  border-color: #FF4136;
+  color: white;
+  background-color: #FF4136;
+  width: ;
+}
+
+.btn--blue {
+  border-color: #0074D9;
+  color: white;
+  background-color: #0074D9;
+  float: left;
 }
