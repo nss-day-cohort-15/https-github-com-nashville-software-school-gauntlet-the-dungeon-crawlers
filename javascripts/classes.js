@@ -92,9 +92,9 @@ Gauntlet.GuildHall.GordonRamsey.prototype = new Gauntlet.GuildHall.RealityTvChef
 
 /*
     FASTFOOD CLASSES
-      - Thief
-      - Ninja
-      - Assassin
+      - The King
+      - Ronald McDonald
+      - Wendy
  */
 Gauntlet.GuildHall.FastFoodChefs = function() {
   this.name = "FastFood";

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "frameworks_testing",
   "authors": [
 <<<<<<< HEAD
@@ -18,6 +19,9 @@
     "test",
     "tests"
   ],
+=======
+  "name": "gauntlet",
+>>>>>>> 8aafd731f12731bef02b4cadde698ab530c272f1
   "dependencies": {
     "jquery": "^3.1.0",
     "bootstrap": "^3.3.7"
