@@ -59,6 +59,21 @@ Gauntlet.Combatants.Player.prototype.generateClass = function() {
   return this.class;
 };
 
+Gauntlet.Combatants.Player.prototype.generateWeapons = function() {
+  // Get a random index from the allowed classes array
+  var random = Math.round(Math.random() * (this.allowedWeapons.length - 1));
+
+  // Get the string at the index
+  var randomWeapon = this.allowedWeapons[random];
+
+  // Composes the corresponding player class into the player object
+  this.weapons = new Gauntlet.Weapons[randomWeapons]();
+
+  // Add the health bonus
+  this.damage += this.weapons.damage;
+  return this.weapons;
+};
+
 Gauntlet.Combatants.Player.prototype.createClass = function(selectedClass) {
  // Get a random index from the allowed classes array
  // var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
@@ -95,6 +110,7 @@ Gauntlet.Combatants.Human = function() {
   this.skinColor = this.skinColors[randomSkin];
 
   this.allowedClasses = ["PaulaDean", "SandraLee", "RachaelRay"];
+  this.allowedWeapons = ["Tacos", "Broccoli"]
 };
 Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
 

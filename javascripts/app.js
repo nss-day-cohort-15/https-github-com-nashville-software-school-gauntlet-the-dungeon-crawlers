@@ -6,10 +6,10 @@
 // warrior.generateClass();  // This will be used for "Surprise me" option
 // console.log(warrior.toString());
 
-// var orc = new Gauntlet.Combatants.Orc();
-// orc.generateClass();
-// orc.setWeapon(new Taco());
-// console.log(orc.toString());
+var orc = new Gauntlet.Combatants.Orc();
+orc.generateClass();
+orc.setWeapon(new Taco());
+console.log(orc.toString());
 
 // Added Event Listener to Class Button and Added Player Class
 
@@ -21,6 +21,7 @@ for (var i = 0; i < buttons.length; i++){
    var player = new Gauntlet.Combatants.Human();
    player.createClass(e.currentTarget.id)
    console.log(e.currentTarget.id)
+  console.log(player)
  })
 }
 
@@ -33,6 +34,7 @@ for (var i = 0; i < buttons.length; i++){
  currButton.addEventListener('click', function(e){
    var player = new Gauntlet.Combatants.Human();
    player.createWeapons(e.currentTarget.id)
+console.log(player)
  })
 }
 
@@ -82,3 +84,22 @@ $(document).ready(function() {
   });
 
 });
+
+
+var defeatButton = $("#defeatButton")
+defeatButton.addEventListener("click", function () {
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
