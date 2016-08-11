@@ -1,3 +1,6 @@
+var Gauntlet = Gauntlet || {};
+Gauntlet.Combatants = {};
+
 var Weapon = function() {
   this.name = "bare hands";
   this.damage = 1;
