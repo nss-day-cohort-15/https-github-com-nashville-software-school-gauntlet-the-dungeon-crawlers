@@ -6,21 +6,21 @@ warrior.setWeapon(new Broccoli());
 warrior.generateClass();  // This will be used for "Surprise me" option
 console.log(warrior.toString());
 
-var PaulaDean = new Gauntlet.GuildHall.Human();
-
-PaulaDean.setWeapon(new Butter());
-console.log(paulaDean)
-
-var paulaDean = new Gauntlet.GuildHall.SouthernChefs();
-console.log(paulaDean)
-// paulaDean.setWeapon(new Butter());
-// warrior.generateClass();
-// console.log(paulaDean.toString());
-
 var orc = new Gauntlet.Combatants.Orc();
 orc.generateClass();
 orc.setWeapon(new Taco());
 console.log(orc.toString());
+
+var buttons = $('.class__link');
+console.log(buttons)
+for (var i = 0; i < buttons.length; i++){
+ var currButton = buttons[i];
+ currButton.addEventListener('click', function(e){
+   var player = new Gauntlet.Combatants.Human();
+   player.createClass(e.currentTarget.id)
+   console.log(player)
+ })
+}
 
 /*
   Test code to generate a spell
