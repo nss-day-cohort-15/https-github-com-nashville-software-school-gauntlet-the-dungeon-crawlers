@@ -37,6 +37,7 @@ for (var i = 0; i < buttons.length; i++){
 }
 
 
+
 /*
   Test code to generate a spell
  */
@@ -61,6 +62,15 @@ $(document).ready(function() {
     console.log("defeat button works")
     display(finalPlayer, opponent)
   })
+
+  // $("#attackButton").click(function (e){
+  //     var monsterHealth = opponent.health.value;
+  //     var playerHealth = finalPlayer.health.value;
+  //     var monsterDamage = opponent.weapons.damage;
+  //     var playerDamage = finalPlayer.weapons.damage;
+  //     console.log(monsterHealth playerDamage)
+  //   )}
+
   /*
     Show the initial view that accepts player name
    */

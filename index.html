@@ -177,10 +177,28 @@
       </div>
     </section>
 
-    <section id="battleground" class="card card--battleground">
-      <div id="playerInfo">Player Info</div>
-      <div id="monsterInfo">Monster Info</div>
+      <section id="battleground" class="card card--battleground">
+
+      <div class="row">
+        <div id="playerInfo" class="col-md-6" id="playerDiv">
+          <span>YOUR HEALTH: </span>
+        </div>
+        <div  id="monsterInfo" class="col-md-6" id="enemyDiv">
+          <span>YOUR ENEMY'S HEALTH: </span>
+        </div>
+     </div>
+
+      <div class="card__button">
+        <a  id = "attackbutton" class="attack__link btn btn--big btn--orange"
+          href="#"
+          next="card--class">
+          <span class="btn__prompt">></span>
+          <span class="btn__text">ATTACK!!!</span>
+        </a>
+      </div>
+
     </section>
+
 
   </article>
 
