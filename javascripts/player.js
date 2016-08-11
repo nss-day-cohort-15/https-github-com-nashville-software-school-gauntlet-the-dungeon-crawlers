@@ -59,8 +59,23 @@ Gauntlet.Combatants.Player.prototype.generateClass = function() {
   return this.class;
 };
 
+Gauntlet.Combatants.Player.prototype.createClass = function(selectedClass) {
+  // Get a random index from the allowed classes array
+  // var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
+console.log(selectedClass)
+  // Get the string at the index
+  // var randomClass = this.allowedClasses[random];
+
+  // Composes the corresponding player class into the player object
+  this.class = new Gauntlet.GuildHall[selectedClass]();
+
+  // Add the health bonus
+  this.health += this.class.healthBonus;
+  return this.class;
+};
+
 /*
-  Define the base properties for a human in a 
+  Define the base properties for a human in a
   constructor function.
  */
 Gauntlet.Combatants.Human = function() {
@@ -79,7 +94,7 @@ Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
 
 
 /*
-  Define the base properties for a monster in a 
+  Define the base properties for a monster in a
   constructor function.
  */
 Gauntlet.Combatants.Monster = function() {

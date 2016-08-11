@@ -34,6 +34,7 @@ Gauntlet.GuildHall.Fighter.prototype = new Gauntlet.GuildHall.PlayerClass();
 
 
 Gauntlet.GuildHall.Warrior = function() {
+  console.log("Warrior is running")
   this.name = "Warrior";
   this.healthBonus = this.healthBonus + 25;
   this.strengthBonus = this.strengthBonus + 30;

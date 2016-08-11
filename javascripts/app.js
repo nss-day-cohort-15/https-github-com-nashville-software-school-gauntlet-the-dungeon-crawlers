@@ -1,6 +1,22 @@
 /*
   Test code to generate a human player and an orc player
  */
+
+var buttons = $('.class__link');
+console.log(buttons)
+for (var i = 0; i < buttons.length; i++){
+  var currButton = buttons[i];
+  currButton.addEventListener('click', function(e){
+    var player = new Gauntlet.Combatants.Human();
+    player.createClass(e.currentTarget.id)
+    console.log(player)
+  })
+}
+
+
+
+
+
 var warrior = new Gauntlet.Combatants.Human();
 warrior.setWeapon(new WarAxe());
 warrior.generateClass();  // This will be used for "Surprise me" option
