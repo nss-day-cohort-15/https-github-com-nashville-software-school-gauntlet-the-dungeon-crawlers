@@ -1,7 +1,11 @@
 {
   "name": "frameworks_testing",
   "authors": [
+<<<<<<< HEAD
     "Ali Kimbrell <alexandrakimbrell@gmail.com>"
+=======
+    "Meg Ducharme <ducharme.meg@gmail.com>"
+>>>>>>> 94f587f7b6baba30a1fd60f507e66a242407c246
   ],
   "description": "",
   "main": "",
