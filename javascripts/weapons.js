@@ -1,4 +1,7 @@
-var Weapon = function() {
+var Gauntlet = Gauntlet || {};
+Gauntlet.Weapons = {};
+
+Gauntlet.Weapons.Weapons = function() {
   this.name = "bare hands";
   this.damage = 1;
   this.hands = 2;
@@ -8,24 +11,30 @@ var Weapon = function() {
   }
 };
 
-var Dagger = function() {
-  this.name = "dagger";
-  this.damage = 4;
+Gauntlet.Weapons.Broccoli = function() {
+  this.name = "broccoli";
+  this.damage = 1;
   this.hands = 1;
 };
-Dagger.prototype = new Weapon();
+Gauntlet.Weapons.Broccoli.prototype = new Gauntlet.Weapons.Weapons();
 
-var BroadSword = function() {
-  this.name = "broad sword";
-  this.damage = 14;
+Gauntlet.Weapons.Taco = function() {
+  this.name = "taco";
+  this.damage = 2;
+  this.hands = 1;
+};
+Gauntlet.Weapons.Taco.prototype = new Gauntlet.Weapons.Weapons();
+
+Gauntlet.Weapons.ChocolateCake = function() {
+  this.name = "chocolateCake";
+  this.damage = 16;
   this.hands = 2;
 };
-BroadSword.prototype = new Weapon();
+Gauntlet.Weapons.ChocolateCake.prototype = new Gauntlet.Weapons.Weapons();
 
-var WarAxe = function() {
-  this.name = "war axe";
+Gauntlet.Weapons.Butter = function() {
+  this.name = "butter";
   this.damage = 18;
   this.hands = 2;
 };
-WarAxe.prototype = new Weapon();
-
+Gauntlet.Weapons.Butter.prototype = new Gauntlet.Weapons.Weapons();
