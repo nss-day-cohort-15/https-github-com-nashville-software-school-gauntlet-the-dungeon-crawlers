@@ -33,7 +33,7 @@ Gauntlet.Combatants.Player = function(name) {
       this.health,
       " health. ",
       (this.class.magical) ? "Able to cast " : " Wielding a ",
-      this.weapon.toString(),
+      this.weapons.toString(),
       "!"
     ].join("");
     return output;
@@ -64,7 +64,11 @@ Gauntlet.Combatants.Player.prototype.generateWeapons = function() {
   var random = Math.round(Math.random() * (this.allowedWeapons.length - 1));
 
   // Get the string at the index
+<<<<<<< HEAD
   var randomWeapon = this.allowedWeapons[random];
+=======
+  var randomWeapons = this.allowedWeapons[random];
+>>>>>>> 8aafd731f12731bef02b4cadde698ab530c272f1
 
   // Composes the corresponding player class into the player object
   this.weapons = new Gauntlet.Weapons[randomWeapons]();
@@ -77,7 +81,7 @@ Gauntlet.Combatants.Player.prototype.generateWeapons = function() {
 Gauntlet.Combatants.Player.prototype.createClass = function(selectedClass) {
  // Get a random index from the allowed classes array
  // var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
-console.log(selectedClass)
+// console.log(selectedClass)
  // Get the string at the index
  // var randomClass = this.allowedClasses[random];
 
@@ -90,7 +94,6 @@ console.log(selectedClass)
 };
 
 Gauntlet.Combatants.Player.prototype.createWeapons = function(selectedWeapons) {
-console.log(selectedWeapons)
  this.weapons = new Gauntlet.Weapons[selectedWeapons]();
  return this.weapons;
 };
@@ -110,7 +113,12 @@ Gauntlet.Combatants.Human = function() {
   this.skinColor = this.skinColors[randomSkin];
 
   this.allowedClasses = ["PaulaDean", "SandraLee", "RachaelRay"];
+<<<<<<< HEAD
   this.allowedWeapons = ["Tacos", "Broccoli"]
+=======
+  this.allowedWeapons = ["Taco", "Broccoli"]
+
+>>>>>>> 8aafd731f12731bef02b4cadde698ab530c272f1
 };
 Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
 
@@ -126,4 +134,18 @@ Gauntlet.Combatants.Monster = function() {
 };
 
 Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

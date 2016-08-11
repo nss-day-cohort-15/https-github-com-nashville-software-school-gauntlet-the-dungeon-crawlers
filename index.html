@@ -112,14 +112,26 @@
       <div class="card__button">
         <a class="card__link btn btn--big btn--orange"
            href="#"
-           next="card--weapon">
+           next="card--weapons">
           <span class="btn__prompt">></span>
-          <span class="btn__text">Select weapon</span>
+          <span class="btn__text">Select weapons</span>
         </a>
       </div>
     </section>
 
-    <section id="weapon-select" class="card card--weapon">
+    <section id="weapons-select" class="card card--weapons">
+
+    <div class="card__prompt">
+        <div>choose your weapon</div>
+        <div>
+          <a class="card__back btn btn--small"
+             href="#"
+             previous="card--class">
+            <span class="btn__prompt">&lt;</span>
+            <span class="btn__text">Back</span>
+          </a>
+        </div>
+      </div>
 
     <div class="container-fluid">
        <div class="row">
@@ -155,18 +167,6 @@
        </div>
      </div>
 
-      <div class="card__prompt">
-        <div>choose your weapon</div>
-        <div>
-          <a class="card__back btn btn--small"
-             href="#"
-             previous="card--class">
-            <span class="btn__prompt">&lt;</span>
-            <span class="btn__text">Back</span>
-          </a>
-        </div>
-      </div>
-
       <div class="card__button">
         <a class="card__link btn btn--big btn--orange"
            href="#"
@@ -177,7 +177,10 @@
       </div>
     </section>
 
-    <section id="battleground" class="card card--battleground"></section>
+    <section id="battleground" class="card card--battleground">
+      <div id="playerInfo">Player Info</div>
+      <div id="monsterInfo">Monster Info</div>
+    </section>
 
   </article>
 
