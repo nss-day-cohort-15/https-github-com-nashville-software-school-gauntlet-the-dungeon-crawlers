@@ -29,7 +29,7 @@ for (var i = 0; i < buttons.length; i++){
 
 var buttons = $('.weapons__link');
 for (var i = 0; i < buttons.length; i++){
-  // console.log("weapons buttons are working")
+  console.log("weapons buttons are working")
  var currButton = buttons[i];
  currButton.addEventListener('click', function(e){
   finalPlayer.weapons = finalPlayer.createWeapons(e.currentTarget.id)
