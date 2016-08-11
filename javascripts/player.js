@@ -33,7 +33,7 @@ Gauntlet.Combatants.Player = function(name) {
       this.health,
       " health. ",
       (this.class.magical) ? "Able to cast " : " Wielding a ",
-      this.weapon.toString(),
+      this.weapons.toString(),
       "!"
     ].join("");
     return output;
@@ -59,10 +59,25 @@ Gauntlet.Combatants.Player.prototype.generateClass = function() {
   return this.class;
 };
 
+Gauntlet.Combatants.Player.prototype.generateWeapons = function() {
+  // Get a random index from the allowed classes array
+  var random = Math.round(Math.random() * (this.allowedWeapons.length - 1));
+
+  // Get the string at the index
+  var randomWeapons = this.allowedWeapons[random];
+
+  // Composes the corresponding player class into the player object
+  this.weapons = new Gauntlet.Weapons[randomWeapons]();
+
+  // Add the health bonus
+  this.damage += this.weapons.damage;
+  return this.weapons;
+};
+
 Gauntlet.Combatants.Player.prototype.createClass = function(selectedClass) {
  // Get a random index from the allowed classes array
  // var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
-console.log(selectedClass)
+// console.log(selectedClass)
  // Get the string at the index
  // var randomClass = this.allowedClasses[random];
 
@@ -75,7 +90,6 @@ console.log(selectedClass)
 };
 
 Gauntlet.Combatants.Player.prototype.createWeapons = function(selectedWeapons) {
-console.log(selectedWeapons)
  this.weapons = new Gauntlet.Weapons[selectedWeapons]();
  return this.weapons;
 };
@@ -95,6 +109,8 @@ Gauntlet.Combatants.Human = function() {
   this.skinColor = this.skinColors[randomSkin];
 
   this.allowedClasses = ["PaulaDean", "SandraLee", "RachaelRay"];
+  this.allowedWeapons = ["Taco", "Broccoli"]
+
 };
 Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
 
@@ -110,4 +126,18 @@ Gauntlet.Combatants.Monster = function() {
 };
 
 Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
