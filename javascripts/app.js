@@ -26,18 +26,6 @@ for (var i = 0; i < buttons.length; i++){
 }
 
 // Added Event Listener to Weapon Buttons and Added Weapon
-
-var buttons = $('.weapons__link');
-for (var i = 0; i < buttons.length; i++){
-  // console.log("weapons buttons are working")
- var currButton = buttons[i];
- currButton.addEventListener('click', function(e){
-  finalPlayer.weapons = finalPlayer.createWeapons(e.currentTarget.id)
- })
-}
-
-
-
 var buttons = $('.class__link');
 console.log(buttons)
 for (var i = 0; i < buttons.length; i++){
@@ -47,6 +35,14 @@ for (var i = 0; i < buttons.length; i++){
  })
 }
 
+var buttons = $('.weapons__link');
+for (var i = 0; i < buttons.length; i++){
+  // console.log("weapons buttons are working")
+ var currButton = buttons[i];
+ currButton.addEventListener('click', function(e){
+  finalPlayer.weapons = finalPlayer.createWeapons(e.currentTarget.id)
+ })
+}
 
 /*
   Test code to generate a spell
@@ -74,14 +70,14 @@ $(document).ready(function() {
       var playerDamage = player.weapons.damage
     // console.log("damage", playerDamage)
 
-         // opponent.health += opponent.class.healthBonus;
-         // finalPlayer.health += finalPlayer.class.healthBonus;
-         //  opponent.strength += opponent.class.strengthBonus;
-         //  finalPlayer.strength += finalPlayer.class.strengthBonus;
-         //  opponent.intelligence += opponent.class.intelligenceBonus;
-         //  finalPlayer.intelligence += finalPlayer.class.intelligenceBonus;
-          // console.log("opponent", opponent);
-          // console.log("finalPlayer", finalPlayer);
+         opponent.health += opponent.class.healthBonus;
+         finalPlayer.health += finalPlayer.class.healthBonus;
+          opponent.strength += opponent.class.strengthBonus;
+          finalPlayer.strength += finalPlayer.class.strengthBonus;
+          opponent.intelligence += opponent.class.intelligenceBonus;
+          finalPlayer.intelligence += finalPlayer.class.intelligenceBonus;
+          console.log("opponent", opponent);
+          console.log("finalPlayer", finalPlayer);
 
     //
 
@@ -90,11 +86,12 @@ $(document).ready(function() {
 
            finalPlayer.health -= Math.round((finalPlayer.strength/10 + playerDamage) + (opponent.intelligence/10));
            opponent.health -= Math.round((opponent.strength/10 + opponentdDamage) + (finalPlayer.intelligence/10));
+           console.log(finalPlayer.strength)
+           console.log(opponent.strength)
             // opponent's health when gets attacked
             // opponent.health -= Math.round((playerDamage + opponent.strength - 20) - (opponent.intelligence/50));
-            console.log("finalPlayer.health", finalPlayer.health)
-            console.log("opponent.health", opponent.health)
-            console.log(player.photo)
+
+              console.log("????", player.intelligence)
             playerInfo.html(`
               <img src = "${player.class.photo}">
               <p>${playerName}</p>
@@ -132,30 +129,6 @@ $(document).ready(function() {
     // console.log("defeat button works")
     display(finalPlayer, opponent)
   })
-
-
-  $("#attackbutton").click(fight)
-
-function fight () {
-    console.log("this is running")
-      var monsterHealth = opponent.health;
-      var playerHealth = finalPlayer.health;
-      var monsterDamage = opponent.weapons.damage;
-      var playerDamage = finalPlayer.weapons.damage;
-
-
-      for (var i = playerHealth || monsterHealth; i >= 0; i--) {
-
-      playerHealth = playerHealth - monsterDamage
-      monsterHealth = monsterHealth - playerDamage
-
-      }
-
-      console.log("player health", playerHealth)
-      console.log("monster health", monsterHealth)
-      console.log(monsterDamage)
-      console.log(playerDamage)
-    }
 
 
   /*

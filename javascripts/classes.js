@@ -69,7 +69,7 @@ Gauntlet.GuildHall.RealityTvChefs = function() {
   this.magical = true;
   this.healthBonus = this.healthBonus - 10;
   this.strengthBonus = this.strengthBonus - 20;
-  this.intelligenceBonus = this.intelligenceBonus + 20;
+  this.intelligenceBonus = this.intelligenceBonus + 40;
 };
 Gauntlet.GuildHall.RealityTvChefs.prototype = new Gauntlet.GuildHall.PlayerClass();
 
@@ -104,7 +104,7 @@ Gauntlet.GuildHall.FastFoodChefs = function() {
   this.magical = true;
   this.healthBonus = this.healthBonus - 10;
   this.strengthBonus = this.strengthBonus - 20;
-  this.intelligenceBonus = this.intelligenceBonus + 20;
+  this.intelligenceBonus = this.intelligenceBonus + 30;
 };
 Gauntlet.GuildHall.FastFoodChefs.prototype = new Gauntlet.GuildHall.PlayerClass();
 
