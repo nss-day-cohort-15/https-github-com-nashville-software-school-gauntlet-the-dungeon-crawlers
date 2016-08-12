@@ -82,21 +82,18 @@ function fight () {
       var monsterDamage = opponent.weapons.damage;
       var playerDamage = finalPlayer.weapons.damage;
 
-      playerHealthAfterAttack = playerHealth - monsterDamage
-      monsterHealthAfterAttack = monsterHealth - playerDamage
 
-      if(playerHealth >= 0) {
-        alert("attack again!")
-      } else {
-        alert("you're dead! :( ")
+      for (var i = playerHealth || monsterHealth; i >= 0; i--) {
+
+      playerHealth = playerHealth - monsterDamage
+      monsterHealth = monsterHealth - playerDamage
+
       }
 
-      console.log(playerHealth)
-      console.log(monsterHealth)
+      console.log("player health", playerHealth)
+      console.log("monster health", monsterHealth)
       console.log(monsterDamage)
       console.log(playerDamage)
-      console.log(playerHealthAfterAttack)
-      console.log(monsterHealthAfterAttack)
     }
 
 
