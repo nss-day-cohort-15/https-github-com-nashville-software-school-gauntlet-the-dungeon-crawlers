@@ -3,19 +3,25 @@ body {
   margin: 0;
   padding: 10px;
   font-size: 3em;
-}
-
-#game-container {
-  background-image: url(http://www.weightofthefoxvalley.org/media/142531/depositphotos_60451217_original.jpg);
+  background: no-repeat url(http://www.weightofthefoxvalley.org/media/142531/depositphotos_60451217_original.jpg);
   background-size: cover;
 }
 
-#player-info {
+/*#game-container {
+  background-image: url(http://www.weightofthefoxvalley.org/media/142531/depositphotos_60451217_original.jpg);
+  background-size: cover;
+}*/
 
+#playerInfo {
+  background: rgba(255,255,255,0.6)
 }
 
-#moster-info {
+#monsterInfo {
+  background: rgba(255,255,255,0.6)
+}
 
+#fightBox {
+  font-weight: bold;
 }
 
 .field {
@@ -121,4 +127,29 @@ body {
 }
 .show {
   display: block;
+}
+
+#playerWins {
+  text-align: center;
+
+}
+
+#enemyWins {
+  text-align: center;
+}
+
+#playerWins h1 {
+  color: red;
+  margin-top: 30%;
+  font-size: 100px;
+  background: white;
+
+}
+
+#enemyWins h1 {
+  color: red;
+  margin-top: 30%;
+  font-size: 100px;
+  background: white;
+
 }

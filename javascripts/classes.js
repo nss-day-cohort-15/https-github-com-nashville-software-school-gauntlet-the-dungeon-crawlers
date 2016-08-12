@@ -36,6 +36,7 @@ Gauntlet.GuildHall.PaulaDean = function() {
   this.name = "Paula Dean";
   this.healthBonus = this.healthBonus + 25;
   this.strengthBonus = this.strengthBonus + 30;
+  this.photo = "/fighters/paula.jpg"
 };
 Gauntlet.GuildHall.PaulaDean.prototype = new Gauntlet.GuildHall.SouthernChefs();
 
@@ -44,6 +45,7 @@ Gauntlet.GuildHall.SandraLee = function() {
   this.name = "Sandra Lee";
   this.healthBonus = this.healthBonus + 20;
   this.strengthBonus = this.strengthBonus + 10;
+  this.photo = "/fighters/sandra.jpg"
 };
 Gauntlet.GuildHall.SandraLee.prototype = new Gauntlet.GuildHall.SouthernChefs();
 
@@ -52,6 +54,7 @@ Gauntlet.GuildHall.RachaelRay = function() {
   this.name = "Rachael Ray";
   this.healthBonus = this.healthBonus + 20;
   this.strengthBonus = this.strengthBonus + 10;
+  this.photo = "/fighters/rachel.jpg"
 };
 Gauntlet.GuildHall.RachaelRay.prototype = new Gauntlet.GuildHall.SouthernChefs();
 
@@ -76,6 +79,7 @@ Gauntlet.GuildHall.GuyFieri = function() {
   this.healthBonus = this.healthBonus + 5;
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 20;
+  this.photo = "/fighters/guy.png"
 };
 Gauntlet.GuildHall.GuyFieri.prototype = new Gauntlet.GuildHall.RealityTvChefs();
 
@@ -85,6 +89,7 @@ Gauntlet.GuildHall.GordonRamsey = function() {
   this.healthBonus = this.healthBonus - 15;
   this.strengthBonus = this.strengthBonus - 25;
   this.intelligenceBonus = this.intelligenceBonus + 10;
+  this.photo = "/fighters/gordon.jpg"
 };
 Gauntlet.GuildHall.GordonRamsey.prototype = new Gauntlet.GuildHall.RealityTvChefs();
 
@@ -109,6 +114,7 @@ Gauntlet.GuildHall.RonaldMcdonald = function() {
   this.healthBonus = this.healthBonus + 5;
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 20;
+  this.photo = "/fighters/rmd.jpg"
 };
 Gauntlet.GuildHall.RonaldMcdonald.prototype = new Gauntlet.GuildHall.FastFoodChefs();
 
@@ -118,6 +124,7 @@ Gauntlet.GuildHall.TheKing = function() {
   this.healthBonus = this.healthBonus - 15;
   this.strengthBonus = this.strengthBonus - 25;
   this.intelligenceBonus = this.intelligenceBonus + 10;
+  this.photo = "/fighters/king.jpg"
 };
 Gauntlet.GuildHall.TheKing.prototype = new Gauntlet.GuildHall.FastFoodChefs();
 
@@ -127,6 +134,7 @@ Gauntlet.GuildHall.Wendy = function() {
   this.healthBonus = this.healthBonus - 15;
   this.strengthBonus = this.strengthBonus - 25;
   this.intelligenceBonus = this.intelligenceBonus + 10;
+  this.photo = "/fighters/wendy.jpg"
 
 };
 Gauntlet.GuildHall.Wendy.prototype = new Gauntlet.GuildHall.FastFoodChefs();

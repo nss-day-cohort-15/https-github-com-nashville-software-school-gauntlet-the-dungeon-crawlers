@@ -58,6 +58,8 @@ for (var i = 0; i < buttons.length; i++){
 $(document).ready(function() {
 
   function display(player, monster){
+    console.log(player);
+    console.log(monster);
   var playerInfo = $("#playerInfo")
   var monsterInfo = $("#monsterInfo")
   var combatants = $("#combatants")
@@ -68,8 +70,8 @@ $(document).ready(function() {
 
   // fight()
   $("#attackbutton").on("click", function(e) {
-      var opponentdDamage = opponent.weapons.damage
-      var playerDamage = finalPlayer.weapons.damage
+      var opponentdDamage = monster.weapons.damage
+      var playerDamage = player.weapons.damage
     // console.log("damage", playerDamage)
 
          // opponent.health += opponent.class.healthBonus;
@@ -92,17 +94,24 @@ $(document).ready(function() {
             // opponent.health -= Math.round((playerDamage + opponent.strength - 20) - (opponent.intelligence/50));
             console.log("finalPlayer.health", finalPlayer.health)
             console.log("opponent.health", opponent.health)
+            console.log(player.photo)
             playerInfo.html(`
-              <p>${playerName}'s =
-              player health ${player.health}</p>
-              player intelligence= ${opponent.intelligence}
-              player strength= ${opponent.intelligence}
+              <img src = "${player.class.photo}">
+              <p>${playerName}</p>
+              <p>health: ${player.health}</p>
+              <p>intelligence: ${player.intelligence}</p>
+              <p>strength: ${player.strength}</p>
+              <p>weilding a ${player.weapons}</p>
               `)
             monsterInfo.html(`
-              <p>${monsterName}'s
-              health =${monster.health}</p>
-              opponent intelligence= ${opponent.intelligence}
-              opponent strength= ${opponent.intelligence}`)
+              <img src = "${monster.class.photo}"
+              <br>
+              <p>${monsterName}</p>
+              <p>health: ${monster.health}</p>
+              <p>intelligence: ${monster.intelligence}</p>
+              <p>strength: ${monster.strength}</p>
+              <p>weilding a ${monster.weapons}</p>
+              `)
 
           if (opponent.health <=  0 ) {
             $("#playerWins").addClass("show");
