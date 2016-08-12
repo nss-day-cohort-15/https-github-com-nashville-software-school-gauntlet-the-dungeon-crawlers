@@ -13,7 +13,7 @@ Gauntlet.Weapons.Weapons = function() {
 
 Gauntlet.Weapons.Broccoli = function() {
   this.name = "broccoli";
-  this.damage = 1;
+  this.damage = 2;
   this.hands = 1;
 };
 Gauntlet.Weapons.Broccoli.prototype = new Gauntlet.Weapons.Weapons();

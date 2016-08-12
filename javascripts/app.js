@@ -49,7 +49,16 @@ $(document).ready(function() {
   function display(player, monster){
   var playerInfo = $("#playerInfo")
   var monsterInfo = $("#monsterInfo")
-  playerInfo.html(`<p>${player.class.name}</p>`)
+  playerInfo.html(`
+    <p>${player.class.name}'s starting health is
+    <p>${player.health}</p> and ${player.class.name}
+    will be fighting with ${player.weapons.name}</p>
+    `)
+  monsterInfo.html(`
+    <p>${monster.class.name}'s starting health is
+    <p>${monster.health}</p> and ${monster.class.name}
+    will be fighting with ${monster.weapons.name}</p>
+    `)
   // fight()
 
 
@@ -64,13 +73,31 @@ $(document).ready(function() {
   })
 
 
-  // $("#attackButton").click(function (e){
-  //     var monsterHealth = opponent.health.value;
-  //     var playerHealth = finalPlayer.health.value;
-  //     var monsterDamage = opponent.weapons.damage;
-  //     var playerDamage = finalPlayer.weapons.damage;
-  //     console.log(monsterHealth playerDamage)
-  //   )}
+  $("#attackbutton").click(fight)
+
+function fight () {
+    console.log("this is running")
+      var monsterHealth = opponent.health;
+      var playerHealth = finalPlayer.health;
+      var monsterDamage = opponent.weapons.damage;
+      var playerDamage = finalPlayer.weapons.damage;
+
+      playerHealthAfterAttack = playerHealth - monsterDamage
+      monsterHealthAfterAttack = monsterHealth - playerDamage
+
+      if(playerHealth >= 0) {
+        alert("attack again!")
+      } else {
+        alert("you're dead! :( ")
+      }
+
+      console.log(playerHealth)
+      console.log(monsterHealth)
+      console.log(monsterDamage)
+      console.log(playerDamage)
+      console.log(playerHealthAfterAttack)
+      console.log(monsterHealthAfterAttack)
+    }
 
 
   /*
@@ -96,7 +123,6 @@ $(document).ready(function() {
       case "card--battleground":
         moveAlong = ($("#player-name").val() !== "");
         break;
-
     }
 
     if (moveAlong) {
