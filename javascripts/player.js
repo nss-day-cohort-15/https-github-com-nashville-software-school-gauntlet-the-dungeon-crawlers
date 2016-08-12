@@ -45,54 +45,38 @@ Gauntlet.Combatants.Player = function(name) {
 // }
 
 Gauntlet.Combatants.Player.prototype.generateClass = function() {
-  // Get a random index from the allowed classes array
   var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
-
-  // Get the string at the index
   var randomClass = this.allowedClasses[random];
 
-  // Composes the corresponding player class into the player object
   this.class = new Gauntlet.GuildHall[randomClass]();
 
-  // Add the health bonus
   this.health += this.class.healthBonus;
   return this.class;
 };
 
 Gauntlet.Combatants.Player.prototype.generateWeapons = function() {
-  // Get a random index from the allowed classes array
+
   var random = Math.round(Math.random() * (this.allowedWeapons.length - 1));
-
-  // Get the string at the index
-  var randomWeapons = this.allowedWeapons[random];
-
-  // Composes the corresponding player class into the player object
+  var randomWeapon = this.allowedWeapons[random];
   this.weapons = new Gauntlet.Weapons[randomWeapons]();
 
-  // Add the health bonus
   this.damage += this.weapons.damage;
   return this.weapons;
 };
 
 Gauntlet.Combatants.Player.prototype.createClass = function(selectedClass) {
- // Get a random index from the allowed classes array
- // var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
-// console.log(selectedClass)
- // Get the string at the index
- // var randomClass = this.allowedClasses[random];
+ // Composes the corresponding player class into the player object
+ this.class = new Gauntlet.GuildHall[selectedClass]();
 
- // Composes the corresponding player class into the player object
- this.class = new Gauntlet.GuildHall[selectedClass]();
-
- // Add the health bonus
- this.health += this.class.healthBonus;
- return this.class;
+ // Add the health bonus
+ this.health += this.class.healthBonus;
+ return this.class;
 };
+
 
 Gauntlet.Combatants.Player.prototype.createWeapons = function(selectedWeapons) {
  this.weapons = new Gauntlet.Weapons[selectedWeapons]();
  return this.weapons;
-
 };
 
 /*
@@ -109,10 +93,9 @@ Gauntlet.Combatants.Human = function() {
   randomSkin = Math.round(Math.random() * (this.skinColors.length-1));
   this.skinColor = this.skinColors[randomSkin];
 
-  this.allowedClasses = ["PaulaDean", "SandraLee", "RachaelRay"];
-  this.allowedWeapons = ["Taco", "Broccoli"]
 
-
+  this.allowedClasses = ["Paula Dean", "Sandra Lee", "Rachael Ray", "Gordon Ramsey", "Ronald Mcdonald", "The King", "Wendy"];
+  this.allowedWeapons = ["Taco", "Broccoli","Chocolate Cake", "Butter"]
 };
 Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
 
@@ -128,4 +111,18 @@ Gauntlet.Combatants.Monster = function() {
 };
 
 Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
