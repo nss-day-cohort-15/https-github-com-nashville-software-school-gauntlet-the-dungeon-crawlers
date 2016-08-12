@@ -59,6 +59,7 @@ Gauntlet.GuildHall.RachaelRay.prototype = new Gauntlet.GuildHall.SouthernChefs()
     REALITY FOOD CLASSES
       - Guy Fieri
       - Gordon Ramsey
+
  */
 Gauntlet.GuildHall.RealityTvChefs = function() {
   this.name = "RealityFood";
@@ -122,10 +123,15 @@ Gauntlet.GuildHall.TheKing = function() {
 };
 Gauntlet.GuildHall.TheKing.prototype = new Gauntlet.GuildHall.FastFoodChefs();
 
+
+
+
+
 Gauntlet.GuildHall.Wendy = function() {
   this.name = "Wendy";
   this.healthBonus = this.healthBonus - 15;
   this.strengthBonus = this.strengthBonus - 25;
   this.intelligenceBonus = this.intelligenceBonus + 10;
+
 };
 Gauntlet.GuildHall.Wendy.prototype = new Gauntlet.GuildHall.FastFoodChefs();

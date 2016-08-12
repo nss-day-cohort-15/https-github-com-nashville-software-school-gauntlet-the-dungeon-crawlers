@@ -38,3 +38,4 @@ Gauntlet.Weapons.Butter = function() {
   this.hands = 2;
 };
 Gauntlet.Weapons.Butter.prototype = new Gauntlet.Weapons.Weapons();
+
