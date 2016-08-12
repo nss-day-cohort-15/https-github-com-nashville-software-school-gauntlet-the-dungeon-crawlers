@@ -14,7 +14,7 @@ Gauntlet.Combatants.Player = function(name) {
   this.weapons = null;
 
   this.playerName = name || "unknown adventurer";
-  this.health = Math.floor(Math.random() * 40 + 50);
+  this.health = Math.floor(Math.random() * 40 + 100);
   this.limbs = ["head", "neck", "arm", "leg", "torso"];
   this.skinColor = "gray";
   this.skinColors = [this.skinColor];
@@ -93,9 +93,9 @@ Gauntlet.Combatants.Human = function() {
   randomSkin = Math.round(Math.random() * (this.skinColors.length-1));
   this.skinColor = this.skinColors[randomSkin];
 
+
   this.allowedClasses = ["Paula Dean", "Sandra Lee", "Rachael Ray", "Gordon Ramsey", "Ronald Mcdonald", "The King", "Wendy"];
   this.allowedWeapons = ["Taco", "Broccoli","Chocolate Cake", "Butter"]
-
 };
 Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
 

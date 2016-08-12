@@ -1,6 +1,7 @@
 Gauntlet.Combatants.Orc = function() {
   this.health = this.health + 20;
   this.species = "Orc";
+
   this.allowedClasses = ["PaulaDean", "SandraLee", "RachaelRay", "GordonRamsey", "RonaldMcdonald", "TheKing", "Wendy"];
   this.allowedWeapons = ["Taco", "Broccoli","ChocolateCake", "Butter"]
 

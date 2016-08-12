@@ -13,28 +13,28 @@ Gauntlet.Weapons.Weapons = function() {
 
 Gauntlet.Weapons.Broccoli = function() {
   this.name = "broccoli";
-  this.damage = 2;
+  this.damage = 3;
   this.hands = 1;
 };
 Gauntlet.Weapons.Broccoli.prototype = new Gauntlet.Weapons.Weapons();
 
 Gauntlet.Weapons.Taco = function() {
   this.name = "taco";
-  this.damage = 2;
+  this.damage = 4;
   this.hands = 1;
 };
 Gauntlet.Weapons.Taco.prototype = new Gauntlet.Weapons.Weapons();
 
 Gauntlet.Weapons.ChocolateCake = function() {
   this.name = "chocolateCake";
-  this.damage = 16;
+  this.damage = 8;
   this.hands = 2;
 };
 Gauntlet.Weapons.ChocolateCake.prototype = new Gauntlet.Weapons.Weapons();
 
 Gauntlet.Weapons.Butter = function() {
   this.name = "butter";
-  this.damage = 18;
+  this.damage = 10;
   this.hands = 2;
 };
 Gauntlet.Weapons.Butter.prototype = new Gauntlet.Weapons.Weapons();
