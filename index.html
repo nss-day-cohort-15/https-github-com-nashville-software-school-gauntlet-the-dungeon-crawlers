@@ -135,38 +135,38 @@
       </div>
 
     <div class="container-fluid">
-       <div class="row">
-         <div class="col-sm-4">
-           <div class="card__button">
-             <a class="weapons__link btn btn--big btn--blue" href="#" id="Broccoli">
-               <span class="btn__prompt">></span>
-               <span class="btn__text">Broccoli</span>
-             </a>
-           </div>
+       <div class="row">
+         <div class="col-sm-4">
+           <div class="card__button">
+             <a class="weapons__link btn btn--big btn--blue" href="#" id="Broccoli">
+               <span class="btn__prompt">></span>
+               <span class="btn__text">Broccoli</span>
+             </a>
+           </div>
 
-           <div class="card__button">
-             <a class="weapons__link btn btn--big btn--blue" href="#" id="Taco">
-               <span class="btn__prompt">></span>
-               <span class="btn__text">Taco</span>
-             </a>
-           </div>
+           <div class="card__button">
+             <a class="weapons__link btn btn--big btn--blue" href="#" id="Taco">
+               <span class="btn__prompt">></span>
+               <span class="btn__text">Taco</span>
+             </a>
+           </div>
 
-           <div class="card__button">
-             <a class="weapons__link btn btn--big btn--blue" href="#" id="ChocolateCake">
-               <span class="btn__prompt">></span>
-               <span class="btn__text">Chocolate Cake</span>
-             </a>
-           </div>
+           <div class="card__button">
+             <a class="weapons__link btn btn--big btn--blue" href="#" id="ChocolateCake">
+               <span class="btn__prompt">></span>
+               <span class="btn__text">Chocolate Cake</span>
+             </a>
+           </div>
 
-           <div class="card__button">
-             <a class="weapons__link btn btn--big btn--blue" href="#" id="Butter">
-               <span class="btn__prompt">></span>
-               <span class="btn__text">Butter</span>
-             </a>
-           </div>
-         </div>
-       </div>
-     </div>
+           <div class="card__button">
+             <a class="weapons__link btn btn--big btn--blue" href="#" id="Butter">
+               <span class="btn__prompt">></span>
+               <span class="btn__text">Butter</span>
+             </a>
+           </div>
+         </div>
+       </div>
+     </div>
 
       <div class="card__button">
         <a class="card__link btn btn--big btn--orange"
@@ -178,9 +178,37 @@
       </div>
     </section>
 
-    <section id="battleground" class="card card--battleground">
-      <div id="playerInfo">Player Info</div>
-      <div id="monsterInfo">Monster Info</div>
+      <section id="battleground" class="card card--battleground">
+
+      <div class="row">
+        <div id="combatants" style="text-align: center"></div>
+        <div id="playerInfo" class="col-md-6" id="playerDiv">
+          <span></span>
+        </div>
+        <div  id="monsterInfo" class="col-md-6" id="enemyDiv">
+          <span></span>
+        </div>
+        <div id="playerWins" class="Hidden">
+          <p>YOU WON!!!!</p>
+          <img src="win.jpg">
+        </div>
+
+        <div id="enemyWins" class="Hidden">
+          <p> YOU LOSE!!!</p>
+          <img src="lose.gif">
+        </div>
+
+     </div>
+
+      <div class="card__button">
+        <a  id = "attackbutton" class="card__link btn btn--big btn--orange"
+           href="#"
+           next="last">
+          <span class="btn__prompt">></span>
+          <span class="btn__text">ATTACK!!!</span>
+        </a>
+      </div>
+
     </section>
 
   </article>

@@ -5,6 +5,19 @@ body {
   font-size: 3em;
 }
 
+#game-container {
+  background-image: url(http://www.weightofthefoxvalley.org/media/142531/depositphotos_60451217_original.jpg);
+  background-size: cover;
+}
+
+#player-info {
+
+}
+
+#moster-info {
+
+}
+
 .field {
   margin: 20px 0 0 0;
 }
@@ -21,7 +34,7 @@ body {
 /*
   Section styles
  */
-.card { 
+.card {
   display: none;
 }
 
@@ -102,4 +115,10 @@ body {
 .btn__text {
   padding: 0 50px 0 20px;
   border-radius: 0 5px 5px 0;
+}
+.Hidden {
+  display: none;
+}
+.show {
+  display: block;
 }
