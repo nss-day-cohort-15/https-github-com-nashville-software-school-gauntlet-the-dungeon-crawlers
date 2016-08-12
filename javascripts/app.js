@@ -48,16 +48,67 @@ $(document).ready(function() {
   function display(player, monster){
   var playerInfo = $("#playerInfo")
   var monsterInfo = $("#monsterInfo")
-  playerInfo.html(`<p>${player.class.name}</p>`)
-  // fight()
+  var combatants = $("#combatants")
+  var playerName = player.class.name
+  var monsterName = monster.class.name
 
-  console.log(player)
-  console.log(monster)
+  combatants.html(`<h1>${playerName}--vs--${monsterName}</h1>`)
+
+  // fight()
+  $("#attackbutton").on("click", function(e) {
+      var opponentdDamage = opponent.weapons.damage
+      var playerDamage = finalPlayer.weapons.damage
+    // console.log("damage", playerDamage)
+
+         // opponent.health += opponent.class.healthBonus;
+         // finalPlayer.health += finalPlayer.class.healthBonus;
+         //  opponent.strength += opponent.class.strengthBonus;
+         //  finalPlayer.strength += finalPlayer.class.strengthBonus;
+         //  opponent.intelligence += opponent.class.intelligenceBonus;
+         //  finalPlayer.intelligence += finalPlayer.class.intelligenceBonus;
+          // console.log("opponent", opponent);
+          // console.log("finalPlayer", finalPlayer);
+
+    //
+
+            // finalPlayer's health when gets attacked
+            // finalPlayer.health -= Math.round((opponentdDamage + finalPlayer.strength - 20) - (finalPlayer.intelligence/50));
+
+           finalPlayer.health -= Math.round((finalPlayer.strength/10 + playerDamage) + (opponent.intelligence/10));
+           opponent.health -= Math.round((opponent.strength/10 + opponentdDamage) + (finalPlayer.intelligence/10));
+            // opponent's health when gets attacked
+            // opponent.health -= Math.round((playerDamage + opponent.strength - 20) - (opponent.intelligence/50));
+            console.log("finalPlayer.health", finalPlayer.health)
+            console.log("opponent.health", opponent.health)
+            playerInfo.html(`
+              <p>${playerName}'s =
+              player health ${player.health}</p>
+              player intelligence= ${opponent.intelligence}
+              player strength= ${opponent.intelligence}
+              `)
+            monsterInfo.html(`
+              <p>${monsterName}'s
+              health =${monster.health}</p>
+              opponent intelligence= ${opponent.intelligence}
+              opponent strength= ${opponent.intelligence}`)
+
+          if (opponent.health <=  0 ) {
+            $("#playerWins").addClass("show");
+            $("#attackbutton").hide()
+          } else if ( finalPlayer.health <= 0){
+            $("#enemyWins").addClass("show");
+            $("#attackbutton").hide()
+          }
+
+        });
+
+  // console.log(player)
+  // console.log(monster)
 }
 
   var defeatButton = $("#defeatButton")
   defeatButton.click(function (e){
-    console.log("defeat button works")
+    // console.log("defeat button works")
     display(finalPlayer, opponent)
   })
   /*
@@ -76,12 +127,15 @@ $(document).ready(function() {
     switch (nextCard) {
       case "card--class":
         moveAlong = ($("#player-name").val() !== "");
+
+
         break;
       case "card--weapons":
         moveAlong = ($("#player-name").val() !== "");
         break;
       case "card--battleground":
         moveAlong = ($("#player-name").val() !== "");
+
         break;
 
     }
@@ -91,6 +145,7 @@ $(document).ready(function() {
       $("." + nextCard).show();
     }
   });
+
 
   /*
     When the back button clicked, move back a view

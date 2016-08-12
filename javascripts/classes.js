@@ -83,7 +83,7 @@ Gauntlet.GuildHall.GordonRamsey = function() {
   this.name = "GordonRamsey";
   this.healthBonus = this.healthBonus - 15;
   this.strengthBonus = this.strengthBonus - 25;
-  this.intelligenceBonus = this.intelligenceBonus + 40;
+  this.intelligenceBonus = this.intelligenceBonus + 10;
 };
 Gauntlet.GuildHall.GordonRamsey.prototype = new Gauntlet.GuildHall.RealityTvChefs();
 
@@ -118,7 +118,7 @@ Gauntlet.GuildHall.TheKing = function() {
   this.name = "TheKing";
   this.healthBonus = this.healthBonus - 15;
   this.strengthBonus = this.strengthBonus - 25;
-  this.intelligenceBonus = this.intelligenceBonus + 40;
+  this.intelligenceBonus = this.intelligenceBonus + 10;
 };
 Gauntlet.GuildHall.TheKing.prototype = new Gauntlet.GuildHall.FastFoodChefs();
 
@@ -126,6 +126,6 @@ Gauntlet.GuildHall.Wendy = function() {
   this.name = "Wendy";
   this.healthBonus = this.healthBonus - 15;
   this.strengthBonus = this.strengthBonus - 25;
-  this.intelligenceBonus = this.intelligenceBonus + 40;
+  this.intelligenceBonus = this.intelligenceBonus + 10;
 };
 Gauntlet.GuildHall.Wendy.prototype = new Gauntlet.GuildHall.FastFoodChefs();
