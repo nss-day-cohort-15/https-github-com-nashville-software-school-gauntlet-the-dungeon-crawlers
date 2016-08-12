@@ -134,28 +134,28 @@ $(document).ready(function() {
   })
 
 
-  $("#attackbutton").click(fight)
+//   $("#attackbutton").click(fight)
 
-function fight () {
-    console.log("this is running")
-      var monsterHealth = opponent.health;
-      var playerHealth = finalPlayer.health;
-      var monsterDamage = opponent.weapons.damage;
-      var playerDamage = finalPlayer.weapons.damage;
+// function fight () {
+//     console.log("this is running")
+//       var monsterHealth = opponent.health;
+//       var playerHealth = finalPlayer.health;
+//       var monsterDamage = opponent.weapons.damage;
+//       var playerDamage = finalPlayer.weapons.damage;
 
 
-      for (var i = playerHealth || monsterHealth; i >= 0; i--) {
+//       for (var i = playerHealth || monsterHealth; i >= 0; i--) {
 
-      playerHealth = playerHealth - monsterDamage
-      monsterHealth = monsterHealth - playerDamage
+//       playerHealth = playerHealth - monsterDamage
+//       monsterHealth = monsterHealth - playerDamage
 
-      }
+//       }
 
-      console.log("player health", playerHealth)
-      console.log("monster health", monsterHealth)
-      console.log(monsterDamage)
-      console.log(playerDamage)
-    }
+//       console.log("player health", playerHealth)
+//       console.log("monster health", monsterHealth)
+//       console.log(monsterDamage)
+//       console.log(playerDamage)
+//     }
 
 
   /*
