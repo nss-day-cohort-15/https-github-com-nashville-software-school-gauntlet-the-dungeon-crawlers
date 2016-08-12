@@ -2,11 +2,11 @@
 /*
   Test code to generate a human player and an orc player
  */
-
 // var warrior = new Gauntlet.Combatants.Human();
 // warrior.setWeapon(new Broccoli());
 // warrior.generateClass();  // This will be used for "Surprise me" option
 // console.log(warrior.toString());
+
 
 var opponent = new Gauntlet.Combatants.Orc();
 opponent.generateClass();
@@ -18,11 +18,11 @@ var finalPlayer
 var buttons = $('.class__link');
 for (var i = 0; i < buttons.length; i++){
    // console.log("class buttons are working")
- var currButton = buttons[i];
- currButton.addEventListener('click', function(e){
-   finalPlayer = new Gauntlet.Combatants.Human();
-  finalPlayer.createClass(e.currentTarget.id)
- })
+ var currButton = buttons[i];
+ currButton.addEventListener('click', function(e){
+   finalPlayer = new Gauntlet.Combatants.Human();
+  finalPlayer.createClass(e.currentTarget.id)
+ })
 }
 
 // Added Event Listener to Weapon Buttons and Added Weapon
@@ -43,11 +43,10 @@ console.log(buttons)
 for (var i = 0; i < buttons.length; i++){
  var currButton = buttons[i];
  currButton.addEventListener('click', function(e){
-   var player = new Gauntlet.Combatants.Human();
-   player.createClass(e.currentTarget.id)
-   console.log(player)
+  finalPlayer.weapons = finalPlayer.createWeapons(e.currentTarget.id)
  })
 }
+
 
 /*
   Test code to generate a spell
@@ -124,6 +123,32 @@ $(document).ready(function() {
     // console.log("defeat button works")
     display(finalPlayer, opponent)
   })
+
+
+  $("#attackbutton").click(fight)
+
+function fight () {
+    console.log("this is running")
+      var monsterHealth = opponent.health;
+      var playerHealth = finalPlayer.health;
+      var monsterDamage = opponent.weapons.damage;
+      var playerDamage = finalPlayer.weapons.damage;
+
+
+      for (var i = playerHealth || monsterHealth; i >= 0; i--) {
+
+      playerHealth = playerHealth - monsterDamage
+      monsterHealth = monsterHealth - playerDamage
+
+      }
+
+      console.log("player health", playerHealth)
+      console.log("monster health", monsterHealth)
+      console.log(monsterDamage)
+      console.log(playerDamage)
+    }
+
+
   /*
     Show the initial view that accepts player name
    */
@@ -150,7 +175,6 @@ $(document).ready(function() {
         moveAlong = ($("#player-name").val() !== "");
 
         break;
-
     }
 
     if (moveAlong) {
@@ -170,3 +194,4 @@ $(document).ready(function() {
   });
 
 });
+
